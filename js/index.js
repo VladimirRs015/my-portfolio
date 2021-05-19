@@ -1,13 +1,15 @@
-const hambuerger = document.querySelector('button.hamburger')
-const navmenu = document.querySelector('.nav-menu')
+const hamburgerContainer = document.querySelector(".hamburger-container");
+const hamburger = document.querySelector("button.hamburger");
+const navmenu = document.querySelector(".nav-menu");
 
-document.addEventListener('click', (e) => {
-  if(navmenu.classList.contains('is-active' && !e.target.matches('.nav-menu'))){
-    navmenu.classList.remove('')
+hamburgerContainer.addEventListener("click", (e) => {
+  if (
+    e.target.matches(".hamburger") ||
+    e.target.matches(".hamburger-box") ||
+    e.target.matches(".hamburger-container") ||
+    e.target.matches(".hamburger-inner")
+  ) {
+    hamburger.classList.toggle("is-active");
+    navmenu.classList.toggle("is-active");
   }
-  else{
-    if (e.target.matches('button.hambuer')) {
-
-    }
-  }
-})
+});
